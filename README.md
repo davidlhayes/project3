@@ -26,12 +26,14 @@ an API Server + a Backbone.js front-end
 3. Sinatra - Chosen over Rails because it is lightweight and flexible 
 4. Bootstrap - A powerful styling framework with-in built-in responsive design abilities
 
-# Security
+## Security
+
+An member id will be required as a parameter in each request.
 
 # App Description
 
 ## PandaCard - A Fictitious Credit Card Company
-*** The front-end of this app will allow a business to access transaction information for clients who pay with PandaCard
+### The front-end of this app will allow a business to access transaction information for clients who pay with PandaCard
 
 ### The API will contain credit card purchase information for all PandaCard holders. PandaCard businesses will create apps to
 ### access the API, but their member key will be required with each request and only return payments made to them
@@ -41,7 +43,8 @@ an API Server + a Backbone.js front-end
 
 ### Columns
 
-1. trans_id
+1. member_id
+2. trans_id
 2. customer_id
 4. trans_date
 5. trans_subtotal
@@ -50,3 +53,18 @@ an API Server + a Backbone.js front-end
 4. trans_total
 5. trans_memo
 
+API payment object JSON example:
+
+{ 
+  'member_id': "12341234",
+  "trans_id": "12341234",
+  "customer_id": "12341234",
+  "trans_date": "2015-8-26 08:34:00",
+  "trans_subtotal": "20.00",
+  "trans_tax": "2.00",
+  "trans_shipping": "4.00",
+  "trans_total": "26.00",
+  "trans_memo": "Check out our selection of all-in-one printers!"
+}
+
+### The PayPal REST API serves as inspiration. Of course, it returns far more attributes in a payment object. It also contains ### sub-objects. If I were to mimic their exmaple more faithfully, for instance, trans_subtotal, trans_tax, trans_shipping, and ### trans_total would all be attributes of a sub-object named amount.
