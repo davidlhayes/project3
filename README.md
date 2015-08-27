@@ -22,8 +22,8 @@ an API Server + a Backbone.js front-end
 ## Technologies Used
 
 1. Ruby
-2. Backbone.js
-3. Sinatra - Chosen over Rails because it is lightweight and flexible
+2. Rails - Chosen over Sinatra for purposes of education and experience.
+3. Backbone.js
 4. Bootstrap - A powerful styling framework with-in built-in responsive design abilities
 
 ## Security

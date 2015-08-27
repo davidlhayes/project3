@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'home/create'
 
-  get 'home/read'
+  # Fixed API key must be appended to end
+  get 'home/index'
+
+  get '/' => 'home#index'
+    # json of data
 
   get 'home/update'
 
