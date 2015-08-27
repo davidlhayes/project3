@@ -1,3 +1,4 @@
+-- Created when I thought I would use Sinatra
 CREATE DATABASE PandaPay;
 -- connect to database
 \c PandaPay;

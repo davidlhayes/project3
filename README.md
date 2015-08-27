@@ -23,21 +23,43 @@ an API Server + a Backbone.js front-end
 
 1. Ruby
 2. Backbone.js
-3. Sinatra - Chosen over Rails because it is lightweight and flexible 
+3. Sinatra - Chosen over Rails because it is lightweight and flexible
 4. Bootstrap - A powerful styling framework with-in built-in responsive design abilities
 
 ## Security
 
-An member id will be required as a parameter in each request.
+An API Key will used to keep the API secure. For ver 1.0, their will be one
+fixed key and it will return the results for every PandaCard payment processor.
+In the app, it means that with every GET, POST, PUT, PATCH, DELETE request, there
+must be appended a key string in the form of <code>/?key=abcdef</code>
+
+# App Premise
+
+## PandaCard - A Fictitious Credit Card Company
+
+PandaCard has members who are businesses which collect PandaCard payments and members who are customers who make payments using PandaCard.
+
+# User Stories
+
+## End User
+
+The end user is a business that collects payments by PandaCard. The business needs to see records of payments collected. They hire someone to build an app to manage their data. That developer needs access to the real-time data posessed by PandaCard.
+
+## Admin
+
+PandaCard needs to manage the payments processed by its member businesses. For maintenance purposes, at least, it needs to view, update, create, and destroy records of payments.
 
 # App Description
 
-## PandaCard - A Fictitious Credit Card Company
-### The front-end of this app will allow a business to access transaction information for clients who pay with PandaCard
+## API
 
-### The API will contain credit card purchase information for all PandaCard holders. PandaCard businesses will create apps to
-### access the API, but their member key will be required with each request and only return payments made to them
-###
+The Application Programming Interface is a key-protected access point for viewing and managing PandaCard data. All of the usual database functions are avaiable: Create, Read, Update, Destroy. See below for a description of the data (model) used.
+
+## Admin Panel
+
+The front-end of this app is an administration panel, containing credit card purchase information for all PandaCard holders.
+
+##
 
 ### The API Table
 
@@ -55,7 +77,7 @@ An member id will be required as a parameter in each request.
 
 API payment object JSON example:
 
-{ 
+{
   'member_id': "12341234",
   "trans_id": "12341234",
   "customer_id": "12341234",
@@ -67,4 +89,4 @@ API payment object JSON example:
   "trans_memo": "Check out our selection of all-in-one printers!"
 }
 
-### The PayPal REST API serves as inspiration. Of course, it returns far more attributes in a payment object. It also contains ### sub-objects. If I were to mimic their exmaple more faithfully, for instance, trans_subtotal, trans_tax, trans_shipping, and ### trans_total would all be attributes of a sub-object named amount.
+The PayPal REST API serves as inspiration. Of course, it returns far more attributes in a payment object. It also contains ### sub-objects. If I were to mimic their exmaple more faithfully, for instance, trans_subtotal, trans_tax, trans_shipping, and ### trans_total would all be attributes of a sub-object named amount.
