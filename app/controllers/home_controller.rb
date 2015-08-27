@@ -1,30 +1,61 @@
 class HomeController < ApplicationController
+
   def index
     @payments = Payment.all
+    render json: @payments
+  end
+
+  def show
+    puts params
+    @payment = Payment.find(params[:id])
+    render json: @payment
   end
 
   def new
     @payment = Payment.new
+    render json: @payment
   end
 
   def create
-    @payments.create(
-      :processor_id => 1234,
-      :customer_id => 5678,
-      :trans_date => '2015-8-15',
-      :trans_subtotal => 50.00,
-      :trans_tax => 8.00,
-      :trans_shipping => 12.00,
-      :trans_total => 70.00
+    puts params
+    @payment = Payment.create(
+      :processor_id => params[:processor_id],
+      :customer_id => params[:customer_id],
+      :trans_date => params[:trans_date],
+      :trans_subtotal => params[:trans_subtotal],
+      :trans_tax => params[:trans_tax],
+      :trans_shipping => params[:trans_shipping],
+      :trans_total => params[:trans_total],
+      :trans_memo => params[:trans_memo.to_s]
     )
+
+    render json: @payment
   end
 
   def delete
 
-    @payment.find(1).destroy
+    @payment = Payment.find(params[:id])
+    @payment.destroy
 
+    @message = {:message => 'A payment with the id of ' + params[:id] + ' has been deleted.'}
+
+    render json: @message
   end
 
   def update
+    puts params
+    @payment = Payment.find(params[:id])
+    @payment.update({
+      :processor_id => params[:processor_id],
+      :customer_id => params[:customer_id],
+      :trans_date => params[:trans_date],
+      :trans_subtotal => params[:trans_subtotal],
+      :trans_tax => params[:trans_tax],
+      :trans_shipping => params[:trans_shipping],
+      :trans_total => params[:trans_total],
+      :trans_memo => params[:trans_memo.to_s]
+    })
+
+    render json: @payment
   end
 end

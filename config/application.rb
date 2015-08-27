@@ -17,6 +17,25 @@ Bundler.require(*Rails.groups)
 
 module Project3
   class Application < Rails::Application
+
+    # Support Cross-Origin Resource Sharing with rack-cors gem
+
+  config.middleware.insert_before 0, "Rack::Cors" do
+    allow do
+      origins '*'
+
+      resource '/cors',
+       :headers => :any,
+       :methods => [:get, :post, :delete, :put, :patch, :options, :head],
+       :max_age => 0
+
+       resource '*',
+       :headers => :any,
+       :methods => [:get, :post, :delete, :put, :patch, :options, :head],
+       :max_age => 0
+    end
+  end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -31,5 +50,6 @@ module Project3
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
   end
 end

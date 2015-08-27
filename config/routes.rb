@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
   # Fixed API key must be appended to end
-  get 'home/index'
 
   get '/' => 'home#index'
     # json of data
-
-  get 'home/update'
-
-  get 'home/destroy'
+  get ':id' =>'home#show'
+  get 'new' => 'home#new'
+  post 'create' => 'home#create'
+  patch ':id' => 'home#update'
+  delete ':id' => 'home#delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
