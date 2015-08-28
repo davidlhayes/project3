@@ -2,11 +2,15 @@ class HomeController < ApplicationController
 
   def index
     @payments = Payment.all
-    render json: @payments
+    if validate(params[:key])
+      render json: @payments
+    else
+      render json: { :message => 'invalid api key'}
+    end
   end
 
   def show
-    puts params
+
     @payment = Payment.find(params[:id])
     render json: @payment
   end
@@ -58,4 +62,22 @@ class HomeController < ApplicationController
 
     render json: @payment
   end
+
+
+
+private
+
+    def validate(key)
+      puts 'Stuff'
+      puts "@@ " + key.to_s + " @@"
+      valid_api_key = File.open("api_key", "r"){ |file| file.read }
+      puts "@@ " + valid_api_key.to_s + " @@"
+      if key.to_s == valid_api_key.to_s
+        puts 'equal'
+      else
+        puts 'not equal'
+      end
+    end
+
+
 end
