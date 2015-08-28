@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Gem to set environment variable for api-key storage
+gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
