@@ -1,0 +1,39 @@
+<script type="text/template" id="payments-template">
+
+        <td><%%= id %></td>
+        <td><%%= processor_id %></td>
+        <td><%%= customer_id %></td>
+        <td><%%= trans_date %></td>
+        <td><%%= trans_subtotal %></td>
+        <td><%%= trans_tax %></td>
+        <td><%%= trans_shipping %></td>
+        <td><%%= trans_total %></td>
+        <td><%%= trans_memo %></td>
+
+</script>
+
+<h1>PandaCard Master Payments List</h1>
+<h3>All Member Payment Processors</h3>
+
+<hr>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="tier-1">Trans ID</th>
+      <th class="tier-1">Processor ID</th>
+      <th class="tier-1">Customer ID</th>
+      <th class="tier-1">Date</th>
+      <th class="tier-2">Subtotal</th>
+      <th class="tier-3">Tax</th>
+      <th class="tier-3">Shipping</th>
+      <th class="tier-1">Total</th>
+      <th class="tier-3">Memo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='payment-row'>
+      <!-- Backbone collection will fill this $el -->
+    </tr>
+  </tbody>
+</table>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'payments#index'
+  root 'home#index'
 
   # Fixed API key must be appended to end
 
