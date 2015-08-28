@@ -11,4 +11,4 @@
 /log/*
 !/log/.keep
 /tmp
-/config/application
+/config/application.yml
