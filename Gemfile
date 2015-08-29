@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 
 # Gem to set environment variable for api-key storage
 gem 'figaro'
