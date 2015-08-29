@@ -8,8 +8,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id=wrapper>
+    <header>
+      <div class="logo">
+      <img src="/assets/panda-310814_1280.png" height="50px"><h1>PandaCard</h1>
+      </div>
+      <div class="title">
+        <h3>Master Payments List</h3>
+        <p>All PandaCard Member Payment Processors</p>
+      </div>
+    </header>
 
-<%= yield %>
+    <%= yield %>
 
+  <footer>
+    <div class="footer">
+      <h3>&copy;2015 David Hayes</h3>
+    </div>
+  </footer>
+
+  </div>
 </body>
 </html>

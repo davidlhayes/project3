@@ -1,23 +1,23 @@
-// #payments-template
-// #payment-row
-
-// obviously I don't want this defind here. The question is how to set it elsewhere
-var apiKey = '5ea222e9adea47398320f432d3e341b1'
+// #people-template
+// #people-list
 
 var app = app || {};
 var active = active || {};
 
-// blueprints
+//blueprints
 app.model = Backbone.Model.extend();
 app.collection = Backbone.Collection.extend({
   model: app.model,
-  url: '/api/payments?key=' + apiKey
+  url: '/api/payments?key='
+    + window.localStorage.PANDACARD_API_KEY
 });
 app.modelView = Backbone.View.extend({
-  intialize: function() {
-  this.template = _.template($('#payments-template').html());
-  // console.log(this.template);
-  this.render();
+  initialize: function() {
+    // every modelView should have a model
+    //this.model
+    this.template = _.template($('#payments-template').html());
+    // console.log(this.template);
+    this.render();
   },
   render: function() {
     var data = this.model.attributes;
@@ -27,8 +27,10 @@ app.modelView = Backbone.View.extend({
 app.collectionView = Backbone.View.extend({
   initialize: function() {
     var that = this;
-    this.collection.on('sync',function() {
+    // every collectionView should have a collection
+    this.collection.on('sync', function() {
       that.render();
+      console.log('sync');
     });
     // retrieve data from my API 'all get' route
     this.collection.fetch();
@@ -37,7 +39,8 @@ app.collectionView = Backbone.View.extend({
   render: function() {
     var collection = this.collection.models;
     for (var model in collection) {
-      // console.log(collection[model].attributes);
+      //console.log(collection[model].attributes);
+      // memory purposes
       new app.modelView({
         el: $('#payment-row'),
         model: collection[model]
@@ -45,13 +48,11 @@ app.collectionView = Backbone.View.extend({
     }
   }
 });
-
-// end blueprints
-
+//end blueprints
 
 $(document).ready(function(event) {
 
-  // instantiate collection & CollectionView
+  // instantiate collection + collectionView
   active.collection = new app.collection();
   active.collectionView = new app.collectionView({
     collection: active.collection,
