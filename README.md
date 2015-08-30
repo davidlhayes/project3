@@ -22,9 +22,9 @@ an API Server + a Backbone.js front-end
 ## Technologies Used
 
 1. Ruby
-2. Rails - Chosen over Sinatra for purposes of education and experience.
-3. Backbone.js
-4. Bootstrap - A powerful styling framework with-in built-in responsive design abilities
+2. Rails framework - Chosen over Sinatra for purposes of education and experience.
+3. Backbone.js with Underscore.js for templating
+4. JavaScript with jQuery
 
 ## Security
 
@@ -65,28 +65,48 @@ The front-end of this app is an administration panel, containing credit card pur
 
 ### Columns
 
-1. member_id
-2. trans_id
-2. customer_id
-4. trans_date
-5. trans_subtotal
-6. trans_tax
-7. trans_shipping
-4. trans_total
-5. trans_memo
+1. id -- a sepcific transaction
+2. processor_name - a business that collects PandaCard payments
+2. customer_name - the customer who made a payment to the processor
+4. trans_date - the date of the transaction
+5. trans_subtotal - the total of the items or service prices
+6. trans_tax - tax charged for this transaction
+7. trans_shipping - shipping charged for this transaction
+4. trans_total - the total of the subtotal + tax + shipping
+5. trans_memo - a memo line that was issued on the customer's receipt
 
 API payment object JSON example:
 
 {
   'member_id': "12341234",
-  "trans_id": "12341234",
-  "customer_id": "12341234",
-  "trans_date": "2015-8-26 08:34:00",
+  "trans_name": "Wilma's Pastries",
+  "customer_name": "Edward Long",
+  "trans_date": "8-29-2015",
   "trans_subtotal": "20.00",
   "trans_tax": "2.00",
   "trans_shipping": "4.00",
   "trans_total": "26.00",
-  "trans_memo": "Check out our selection of all-in-one printers!"
+  "trans_memo": "Check out our selection of crullers!"
 }
 
-The PayPal REST API serves as inspiration. Of course, it returns far more attributes in a payment object. It also contains ### sub-objects. If I were to mimic their exmaple more faithfully, for instance, trans_subtotal, trans_tax, trans_shipping, and ### trans_total would all be attributes of a sub-object named amount.
+The PayPal REST API serves as inspiration. Of course, it returns far more attributes in a payment object. It also contains sub-objects. If I were to mimic their exmaple more faithfully, for instance, trans_subtotal, trans_tax, trans_shipping, and trans_total would all be attributes of a sub-object named amount.
+
+# Challenges and Solutions
+
+
+
+# Version 2.0 Wish List
+
+1. Realistically, PROCESSORS and CUSTOMERS should be in separate models and referenced in the currently used PAYMENTS model by id and joined with one to many relationships (one PAYMENT to one PROCESSOR, one CUSTOMER), because PandaCard has more information about each than just their names.
+
+2. The value of the PandaCard payments API is most evident when processors and customers can see transaction data specific to them. Separate apps could be developed for processors and customers, but that means that each API key must be checked against a table to determine which records are permitted to be returned.
+
+# Future development
+
+A look at a comparable existing service quickly shines a light on other components necessary if I was to develop PandaCard into a functioning enterprise.
+
+1. PandaCard would collect fees, handle refunds and disputes.
+
+2. Canceled or incomplete transactions would not be deleted, but tracked separately.
+
+3. Security must be leading edge, for the apps, the API, the log-ins.
