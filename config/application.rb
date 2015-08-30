@@ -27,7 +27,7 @@ module Project3
     # adding the following two requires to try to solve rack-cors error on heroku
     # in config/application.rb
     config.action_dispatch.default_headers = {
-        'Access-Control-Allow-Origin' => 'http://pandacard.herokuapp.com',
+        'Access-Control-Allow-Origin' => 'http://pandacardprocessing.herokuapp.com',
         'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
       }
 
