@@ -24,6 +24,13 @@ Bundler.require(*Rails.groups)
 module Project3
   class Application < Rails::Application
 
+    # adding the following two requires to try to solve rack-cors error on heroku
+    # in config/application.rb
+    config.action_dispatch.default_headers = {
+        'Access-Control-Allow-Origin' => 'http://pandacard.herokuapp.com',
+        'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+      }
+
     # Support Cross-Origin Resource Sharing with rack-cors gem
 
   # config.middleware.insert_before 0, "Rack::Cors" do

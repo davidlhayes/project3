@@ -1,0 +1,91 @@
+$font-stack: Verdana, serif;
+$primary-dark-color: rgb(0,0,0);
+$primary-light-color: rgb(255,255,255);
+$primary-contrast-color: rgb(166, 76, 100);
+$logo-font-family: fantasy;
+$data-font-size: 11px;
+
+// APPLICATION SCSS
+
+ body {
+   background: radial-gradient(white, black);
+   font-family: $font-stack;
+   margin: 0;
+   padding: 0;
+   height: 2000px;
+ }
+ #wrapper {
+  width: 70%;
+  margin: -20px auto 0 auto;
+  padding: 0;
+  background-color: $primary-light-color;
+}
+header {
+  margin: 1.9%;
+}
+.logo {
+  padding-top: 3%;
+}
+img {
+  float: left;
+}
+h1 {
+  float: left;
+  font-family: $logo-font-family;
+  margin-top: 0;
+  margin-left: 2px;
+}
+.header-subtitle {
+  font-family: $font-stack;
+  font-weight: 800;
+  margin-top: -10px;
+  float: right;
+}
+.title {
+  clear: both;
+  color: $primary-light-color;
+  background-color: $primary-contrast-color;
+  margin: 0 -2% 0 -2%;
+  padding: .1% 2% .1% 2%;
+}
+button  {
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+table {
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: $data-font-size;
+  border-collapse: collapse;
+}
+td, th {
+  margin: 0;
+  padding: 4px 10px 4px 10px;
+  border: 1px solid $primary-contrast-color;
+  white-space: nowrap;
+}
+.md-col {
+    width: 8%;
+}
+.wd-col {
+    width: 15%;
+}
+.xwd-col {
+    width: 60%;
+}
+footer {
+  background-color: $primary-contrast-color;
+}
+
+@media (max-width: 1200px) {
+  .tier-3 {
+    display: none;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .tier-2 {
+    display: none;
+  }
+}
