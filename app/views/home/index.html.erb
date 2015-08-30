@@ -1,29 +1,29 @@
 <script type="text/template" id="payments-template">
   <tr>
-    <td class='tier-1'><%%= id %></td>
-    <td class='tier-1'><%%= processor_id %></td>
-    <td class='tier-1'><%%= customer_id %></td>
-    <td class='tier-1'><%%= trans_date %></td>
-    <td class='tier-2'><%%= trans_subtotal %></td>
-    <td class='tier-3'><%%= trans_tax %></td>
-    <td class='tier-3'><%%= trans_shipping %></td>
-    <td class='tier-1'><%%= trans_total %></td>
-    <td class='tier-3 wide'><%%= trans_memo %></td>
+    <td class='tier-1 md-col'><%%= id %></td>
+    <td class='tier-1 wd-col'><%%= processor_name %></td>
+    <td class='tier-1 wd-col'><%%= customer_name %></td>
+    <td class='tier-1 md-col'><%%= trans_date %></td>
+    <td class='tier-2 md-col'><%%= trans_subtotal %></td>
+    <td class='tier-3 md-col'><%%= trans_tax %></td>
+    <td class='tier-3 md-col'><%%= trans_shipping %></td>
+    <td class='tier-1 md-col'><%%= trans_total %></td>
+    <td class='tier-3 xwd-col'><%%= trans_memo %></td>
   </tr>
 </script>
 
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th class="tier-1">Trans ID</th>
-        <th class="tier-1">Processor ID</th>
-        <th class="tier-1">Customer ID</th>
-        <th class="tier-1">Date</th>
-        <th class="tier-2">Subtotal</th>
-        <th class="tier-3">Tax</th>
-        <th class="tier-3">Shipping</th>
-        <th class="tier-1">Total</th>
-        <th class="tier-3 wide">Memo</th>
+        <th class="tier-1 md-col">Trans ID</th>
+        <th class="tier-1 wd-col">Processor</th>
+        <th class="tier-1 wd-col">Customer</th>
+        <th class="tier-1 md-col">Date</th>
+        <th class="tier-2 md-col">Subtotal</th>
+        <th class="tier-3 md-col">Tax</th>
+        <th class="tier-3 md-col">Shipping</th>
+        <th class="tier-1 md-col">Total</th>
+        <th class="tier-3 xwd-col">Memo</th>
       </tr>
     </thead>
     <tbody id='payment-row'>

@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20150827020436) do
   enable_extension "plpgsql"
 
   create_table "payments", force: :cascade do |t|
-    t.integer  "processor_id"
-    t.integer  "customer_id"
+    t.string   "processor_name"
+    t.string   "customer_name"
     t.string   "trans_date"
     t.decimal  "trans_subtotal", precision: 10, scale: 2
     t.decimal  "trans_tax",      precision: 10, scale: 2

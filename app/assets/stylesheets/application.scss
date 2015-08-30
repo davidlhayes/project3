@@ -30,6 +30,7 @@ $data-font-size: 11px;
    font-family: $font-stack;
    margin: 0;
    padding: 0;
+   height: 2000px;
  }
  #wrapper {
   width: 70%;
@@ -38,7 +39,7 @@ $data-font-size: 11px;
   background-color: $primary-light-color;
 }
 header {
-  margin: 2%;
+  margin: 1.9%;
 }
 .logo {
   padding-top: 3%;
@@ -71,14 +72,20 @@ td, th {
   border: 1px solid $primary-contrast-color;
   white-space: nowrap;
 }
-.wide {
+.md-col {
+    width: 8%;
+}
+.wd-col {
+    width: 15%;
+}
+.xwd-col {
     width: 60%;
 }
 footer {
   background-color: $primary-contrast-color;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .tier-3 {
     display: none;
   }

@@ -36,8 +36,8 @@ class PaymentsController < ApplicationController
     if validate(params[:key])  # make sure access is authorized
       render json: @payment
       @payment = Payment.create(
-        :processor_id => params[:processor_id],
-        :customer_id => params[:customer_id],
+        :processor_name => params[:processor_name],
+        :customer_name => params[:customer_name],
         :trans_date => params[:trans_date],
         :trans_subtotal => params[:trans_subtotal],
         :trans_tax => params[:trans_tax],
@@ -69,8 +69,8 @@ class PaymentsController < ApplicationController
     if validate(params[:key]) # make sure access is authorized
       @payment = Payment.find(params[:id])
       @payment.update({
-        :processor_id => params[:processor_id],
-        :customer_id => params[:customer_id],
+        :processor_name => params[:processor_name],
+        :customer_name => params[:customer_nameß],
         :trans_date => params[:trans_date],
         :trans_subtotal => params[:trans_subtotal],
         :trans_tax => params[:trans_tax],

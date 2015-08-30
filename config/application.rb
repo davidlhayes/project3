@@ -11,6 +11,12 @@ require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+# adding the following two requires to try to solve rack-cors error on heroku
+require 'rack'
+require 'rack/cors'
+# end heroku mod for rack-cors error
+#
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
