@@ -12,8 +12,8 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 # adding the following two requires to try to solve rack-cors error on heroku
-require 'rack'
-require 'rack/cors'
+# require 'rack'
+# require 'rack/cors'
 # end heroku mod for rack-cors error
 #
 
