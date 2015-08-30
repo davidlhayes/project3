@@ -29,12 +29,14 @@ app.collectionView = Backbone.View.extend({
     var that = this;
     // every collectionView should have a collection
     this.collection.on('sync', function() {
+      that.$el.html('');
       that.render();
       console.log('sync');
     });
     // retrieve data from my API 'all get' route
     this.collection.fetch();
     this.$el.html(''); // empty out any content inside of my $el
+    console.log('the el has been emptied');
   },
   render: function() {
     var collection = this.collection.models;
@@ -58,5 +60,10 @@ $(document).ready(function(event) {
     collection: active.collection,
     el: $('#payment-row')
   });
+
+  $('#refresh-list').on('click',function() {
+    active.collection.fetch();
+  });
+
 
 });
