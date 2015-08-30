@@ -93,7 +93,9 @@ The PayPal REST API serves as inspiration. Of course, it returns far more attrib
 
 # Challenges and Solutions
 
+1.  Once PandaCard worked succesfully on my local computer, I uploaded it to Heroku. Heroku returned a 503 error page, application not available.
 
+2. 
 
 # Version 2.0 Wish List
 
