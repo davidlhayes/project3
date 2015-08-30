@@ -1,20 +1,26 @@
 // #people-template
 // #people-list
-
-var app = app || {};
-var active = active || {};
+// namespace this app!
+var payments = payments || {};
+// the constructor namespace
+payments.blueprints = payments.blueprints || {};
+// the instantiated models
+payments.active = payments.active || {};
 
 //blueprints
-app.model = Backbone.Model.extend();
-app.collection = Backbone.Collection.extend({
-  model: app.model,
+// single model (payment record)
+payments.blueprints.model = Backbone.Model.extend();
+// model collection (payment record list)
+payments.blueprints.collection = Backbone.Collection.extend({
+  model: payments.blueprints.model,
   url: '/api/payments?key='
     + window.localStorage.PANDACARD_API_KEY
 });
-app.modelView = Backbone.View.extend({
+// model view
+payments.blueprints.modelView = Backbone.View.extend({
   initialize: function() {
     // every modelView should have a model
-    //this.model
+    // using an underscore.js template, spelled out in index.html.erb
     this.template = _.template($('#payments-template').html());
     // console.log(this.template);
     this.render();
@@ -24,26 +30,27 @@ app.modelView = Backbone.View.extend({
     this.$el.append(this.template(data));
   }
 });
-app.collectionView = Backbone.View.extend({
+// collection view
+payments.blueprints.collectionView = Backbone.View.extend({
   initialize: function() {
     var that = this;
     // every collectionView should have a collection
     this.collection.on('sync', function() {
       that.$el.html('');
       that.render();
-      console.log('sync');
+      // console.log('sync');
     });
     // retrieve data from my API 'all get' route
     this.collection.fetch();
     this.$el.html(''); // empty out any content inside of my $el
-    console.log('the el has been emptied');
+    // console.log('the el has been emptied');
   },
   render: function() {
     var collection = this.collection.models;
     for (var model in collection) {
       //console.log(collection[model].attributes);
       // memory purposes
-      new app.modelView({
+      new payments.blueprints.modelView({
         el: $('#payment-row'),
         model: collection[model]
       });
@@ -52,18 +59,22 @@ app.collectionView = Backbone.View.extend({
 });
 //end blueprints
 
+// ...and action!
 $(document).ready(function(event) {
 
   // instantiate collection + collectionView
-  active.collection = new app.collection();
-  active.collectionView = new app.collectionView({
-    collection: active.collection,
+  payments.active.collection = new payments.blueprints.collection();
+  payments.active.collectionView = new payments.blueprints.collectionView({
+    collection: payments.active.collection,
     el: $('#payment-row')
   });
 
   $('#refresh-list').on('click',function() {
-    active.collection.fetch();
+    payments.active.collection.fetch();
   });
 
+  $('#filter-list').on('click',function() {
+    // payments.active.collection. fetch some<---------------finish
+  });
 
 });
