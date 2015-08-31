@@ -43,7 +43,7 @@ class PaymentsController < ApplicationController
         :trans_tax => params[:trans_tax],
         :trans_shipping => params[:trans_shipping],
         :trans_total => params[:trans_total],
-        :trans_memo => params[:trans_memo.to_s]
+        :trans_memo => params[:trans_memo]
       )
     else
       render json: { :message => 'invalid api key'}
@@ -70,7 +70,7 @@ class PaymentsController < ApplicationController
       @payment = Payment.find(params[:id])
       @payment.update({
         :processor_name => params[:processor_name],
-        :customer_name => params[:customer_nameß],
+        :customer_name => params[:customer_name],
         :trans_date => params[:trans_date],
         :trans_subtotal => params[:trans_subtotal],
         :trans_tax => params[:trans_tax],

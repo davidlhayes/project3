@@ -1,31 +1,58 @@
+<!-- underscore template used below by Backbone -->
 <script type="text/template" id="payments-template">
   <tr>
     <td class='tier-1 sm-col'><%%= id %></td>
     <td class='tier-1 wd-col'><%%= processor_name %></td>
     <td class='tier-1 wd-col'><%%= customer_name %></td>
     <td class='tier-1 md-col'><%%= trans_date %></td>
-    <td class='tier-2 md-col'><%%= trans_subtotal %></td>
-    <td class='tier-3 md-col'><%%= trans_tax %></td>
-    <td class='tier-3 md-col'><%%= trans_shipping %></td>
-    <td class='tier-1 md-col'><%%= trans_total %></td>
+    <td class='tier-2 md-col currency'><%%= trans_subtotal %></td>
+    <td class='tier-3 md-col currency'><%%= trans_tax %></td>
+    <td class='tier-3 md-col currency'><%%= trans_shipping%></td>
+    <td class='tier-1 md-col currency'><%%= trans_total %></td>
     <td class='tier-3 xwd-col'><%%= trans_memo %></td>
   </tr>
 </script>
+<!-- refresh button -->
   <button type="submit" id='refresh-list' class="btn btn-default">Refresh</button>
+  <!-- data display -->
   <table class="table table-bordered">
+    <!-- the header rows -->
     <thead>
       <tr>
-        <th class="tier-1 sm-col">Trans#</th>
-        <th class="tier-1 wd-col">Processor</th>
-        <th class="tier-1 wd-col">Customer</th>
-        <th class="tier-1 md-col">Date</th>
+        <!-- transaction id, followed by up/down sort arrows -->
+        <th class="tier-1 sm-col">
+          Trans ID
+          <span id='sort-id-up'> &#9650;</span>
+          <span id='sort-id-down'> &#9660;</span>
+        </th>
+        <!-- payment processor name, followed by up/down sort arrows -->
+        <th class="tier-1 wd-col">
+          Processor
+          <span id='sort-proc-up'> &#9650;</span>
+          <span id='sort-proc-down'> &#9660;</span>
+        </th>
+        <!-- customer name, followed by up/down sort arrows -->
+        <th class="tier-1 wd-col">
+          Customer
+          <span id='sort-cust-up'> &#9650;</span>
+          <span id='sort-cust-down'> &#9660;</span>
+        </th>
+        <!-- date, followed by up/down sort arrows -->
+        <th class="tier-1 md-col">
+          Date
+          <span id='sort-date-up'> &#9650;</span>
+          <span id='sort-date-down'> &#9660;</span>
+        </th>
+        <!-- the amount columns -->
         <th class="tier-2 md-col">Subtotal</th>
         <th class="tier-3 md-col">Tax</th>
         <th class="tier-3 md-col">Shipping</th>
         <th class="tier-1 md-col">Total</th>
+        <!-- a receipt memo line -->
         <th class="tier-3 xwd-col">Memo</th>
       </tr>
     </thead>
+    <!-- and so ends the header of our table -->
     <tbody id='payment-row'>
         <!-- Backbone collection will fill this $el -->
     </tbody>

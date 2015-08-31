@@ -39,7 +39,7 @@ h1 {
 .header-subtitle {
   font-family: $font-stack;
   font-weight: 800;
-  margin-top: -10px;
+  margin-top: -5px;
   float: right;
 }
 .title {
@@ -53,12 +53,20 @@ button  {
   margin-left: 25px;
   margin-bottom: 10px;
 }
+button:hover {
+  background-color: $primary-contrast-color;
+  color: $primary-light-color;
+  margin-bottom: 8px;
+}
 table {
   margin-left: 2%;
   margin-right: 2%;
   margin-bottom: 20px;
   font-size: $data-font-size;
   border-collapse: collapse;
+  span:hover {
+    cursor: pointer;
+  }
 }
 td, th {
   margin: 0;

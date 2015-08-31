@@ -5,8 +5,8 @@ CREATE DATABASE PandaPay;
 
 CREATE TABLE payment (
   trans_id SERIAL PRIMARY KEY,
-  processor_id integer,
-  customer_id integer,
+  processor_name varchar(25),
+  customer_name varchar(25),
   trans_date timestamp,
   trans_subtotal currency,
   trans_tax currency,
