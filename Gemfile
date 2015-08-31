@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'unicorn'
   #gem 'puma'
   gem 'rails_12factor', group: :production
-  gem 'puma', group: :production
+  #gem 'puma', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
