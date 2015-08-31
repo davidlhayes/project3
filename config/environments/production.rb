@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.serve_static_files = true #ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -76,11 +76,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  # config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
-  #   allow do
-  #     origins '*'
-  #     resource '*', :headers => :any, :methods => [:get, :post, :options]
-  #   end
-  # end
 end
