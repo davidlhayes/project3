@@ -57,12 +57,15 @@ payments.blueprints.collectionView = Backbone.View.extend({
     this.$el.html('');
     var sum = 0;
     for (var model in collection) {
-      // sum the total       
-      sum = sum + Number(collection[model].get('trans_total'));
-      new payments.blueprints.modelView({
-        el: $('#payment-row'),
-        model: collection[model]
-      });
+      // code started below to filter results
+      // if (collection[model].get('processor_name') == 'Zero My Hero') {
+        // sum the total
+        sum = sum + Number(collection[model].get('trans_total'));
+        new payments.blueprints.modelView({
+          el: $('#payment-row'),
+          model: collection[model]
+        });
+      // }
       // post the total
       $('#pmtTotal').html(sum);
     }
