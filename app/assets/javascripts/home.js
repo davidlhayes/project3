@@ -58,14 +58,18 @@ payments.blueprints.collectionView = Backbone.View.extend({
     var sum = 0;
     for (var model in collection) {
       // code started below to filter results
-      // if (collection[model].get('processor_name') == 'Zero My Hero') {
+      // console.log('------FIRST-----');
+      // console.log($('#processor_name_target').val());
+      // console.log(($('#processor_name_target').val()==null));
+      // console.log('------LAST------');
+      if ((collection[model].get('processor_name') ==  $('#processor_name_target').val()) || $('#processor_name_target').val()=='') {
         // sum the total
         sum = sum + Number(collection[model].get('trans_total'));
         new payments.blueprints.modelView({
           el: $('#payment-row'),
           model: collection[model]
         });
-      // }
+      }
       // post the total
       $('#pmtTotal').html(sum);
     }
@@ -85,6 +89,9 @@ $(document).ready(function(event) {
     el: $('#payment-row')
   });
 
+  $('.clear').on('click',function() {
+      $('#processor_name_target').val('');
+  });
 
   // refresh sort buttons;
   $('#refresh-list').on('click',function() {

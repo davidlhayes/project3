@@ -6,12 +6,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
   <div id=wrapper>
     <header>
       <div class="logo">
-        <!-- <img src='images/panda.jpg'> -->
+        <img src='/assets/images/panda-310814_1280.png' width='50px'>
       <h1>PandaCard</h1>
       </div>
       <div class="header-subtitle">Corporate<br>Administration<br>Panel</div>
@@ -25,7 +26,15 @@
 
   <footer>
     <div class="footer">
-      <h3>&copy;2015 David Hayes</h3>
+      <div class="left">
+        <h3>&copy;2015 David Hayes</h3>
+      </div>
+      <div class="right">
+        <a href="https://github.com/davidlhayes/project3">About this site</a>
+        <a href="https://about.me/davidlynnhayes">About the developer</a>
+      </div>
+
+
     </div>
   </footer>
 

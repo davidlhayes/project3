@@ -101,6 +101,15 @@ footer {
   clear: both;
   background-color: $primary-contrast-color;
   padding: 5px 0 15px 3%;
+  height: 75px;
+}
+.left {
+  float: left;
+  margin: 5px 15px 15px 0px;
+}
+.right {
+  float: right;
+  margin: 25px 15px 15px 0px;
 }
 
 @media (max-width: 1200px) {
