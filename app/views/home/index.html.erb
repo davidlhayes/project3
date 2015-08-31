@@ -1,7 +1,7 @@
 <!-- underscore template used below by Backbone -->
 <script type="text/template" id="payments-template">
   <tr>
-    <td class='tier-1 sm-col'><%%= id %></td>
+    <td class='tier-1 sm-col id'><%%= id %></td>
     <td class='tier-1 wd-col'><%%= processor_name %></td>
     <td class='tier-1 wd-col'><%%= customer_name %></td>
     <td class='tier-1 md-col'><%%= trans_date %></td>
@@ -57,3 +57,7 @@
         <!-- Backbone collection will fill this $el -->
     </tbody>
   </table>
+  <div class="total">
+    Payments Total:
+    <span id="pmtTotal"></span>
+  </div>

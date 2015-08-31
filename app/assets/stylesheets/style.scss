@@ -67,6 +67,12 @@ table {
   span:hover {
     cursor: pointer;
   }
+  .id {
+    text-align: center;
+  }
+  .currency {
+    text-align: right;
+  }
 }
 td, th {
   margin: 0;
@@ -86,7 +92,13 @@ td, th {
 .xwd-col {
     width: 60%;
 }
+.total {
+  float: right;
+  margin-right: 5%;
+  margin-bottom: 15px;
+}
 footer {
+  clear: both;
   background-color: $primary-contrast-color;
   padding: 5px 0 15px 3%;
 }

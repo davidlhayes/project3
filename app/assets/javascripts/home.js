@@ -7,20 +7,23 @@ payments.blueprints = payments.blueprints || {};
 // the instantiated models
 payments.active = payments.active || {};
 
+
 //blueprints
 // single model (payment record)
 payments.blueprints.model = Backbone.Model.extend();
 // model collection (payment record list)
 payments.blueprints.collection = Backbone.Collection.extend({
   model: payments.blueprints.model,
+
   comparator: function(model) {
-    return model.get('customer_name')
+    // console.log(model.get('trans_total'));
+    // PaymentsTotal = PaymentsTotal + model.get('trans_total');
+    return model.get('customer_name');
   },
   url: '/api/payments?key='
     + window.localStorage.PANDACARD_API_KEY
 });
 // model view
-
 
 payments.blueprints.modelView = Backbone.View.extend({
   initialize: function() {
@@ -52,17 +55,21 @@ payments.blueprints.collectionView = Backbone.View.extend({
   render: function() {
     var collection = this.collection.models;
     this.$el.html('');
+    var sum = 0;
     for (var model in collection) {
-      //console.log(collection[model].attributes);
-      // memory purposes
+      // sum the total       
+      sum = sum + Number(collection[model].get('trans_total'));
       new payments.blueprints.modelView({
         el: $('#payment-row'),
         model: collection[model]
       });
+      // post the total
+      $('#pmtTotal').html(sum);
     }
- 
+
   }
 });
+
 //end blueprints
 
 // ...and action!
@@ -74,6 +81,8 @@ $(document).ready(function(event) {
     collection: payments.active.collection,
     el: $('#payment-row')
   });
+
+
   // refresh sort buttons;
   $('#refresh-list').on('click',function() {
     payments.active.collection.sort();
@@ -83,7 +92,7 @@ $(document).ready(function(event) {
   // transaction id sort buttons
   $('#sort-id-up').on('click',function() {
     payments.active.collection.comparator = function(model) {
-      return model.get('id');
+      return -model.get('id');
     }
     console.log('id up got clicked');
     // call the sort
@@ -103,7 +112,13 @@ $(document).ready(function(event) {
   // processor sort buttons
   $('#sort-proc-up').on('click',function() {
     payments.active.collection.comparator = function(model) {
-      return model.get('processor_name');
+      var str = model.get('processor_name');
+      str = str.toLowerCase();
+      str = str.split("");
+      str = _.map(str, function(letter){
+        return String.fromCharCode(-(letter.charCodeAt(0)));
+      });
+    return str;
     }
     console.log('processor up got clicked');
     // call the sort
@@ -123,8 +138,14 @@ $(document).ready(function(event) {
 
   // customer sort buttons
   $('#sort-cust-up').on('click',function() {
-    payments.active.collection.comparator = function(model) {
-      return model.get('customer_name');
+    payments.active.collection.comparator =  function(model) {
+      var str = model.get('customer_name');
+      str = str.toLowerCase();
+      str = str.split("");
+      str = _.map(str, function(letter){
+        return String.fromCharCode(-(letter.charCodeAt(0)));
+      });
+    return str;
     }
     console.log('customer up got clicked');
     // call the sort
@@ -144,7 +165,13 @@ $(document).ready(function(event) {
   // date sort buttons
   $('#sort-date-up').on('click',function() {
     payments.active.collection.comparator = function(model) {
-      return model.get('date');
+      var str = model.get('trans_date');
+      str = str.toLowerCase();
+      str = str.split("");
+      str = _.map(str, function(letter){
+        return String.fromCharCode(-(letter.charCodeAt(0)));
+      });
+      return str;
     }
     console.log('date up got clicked');
     // call the sort
@@ -154,11 +181,12 @@ $(document).ready(function(event) {
 
   $('#sort-date-down').on('click',function() {
     payments.active.collection.comparator = function(model) {
-      return model.get('date');
+      return model.get('trans_date');
     }
     console.log('date down got clicked');
     // call the sort
     payments.active.collection.sort();
+    payments.active.collectionView.render();
   });
   console.log('hi');
 
