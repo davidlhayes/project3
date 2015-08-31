@@ -1,12 +1,10 @@
 # This file is used by Rack-based servers to start the application.
-require 'rack'
-require 'rack/static'
 
 require ::File.expand_path('../config/environment', __FILE__)
 run Rails.application
 
-require 'rack/cors'
-use Rack::Cors do
+# require 'rack/cors'
+# use Rack::Cors do
 
   # allow all origins in development
   # allow do
