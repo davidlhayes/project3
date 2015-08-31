@@ -15,4 +15,130 @@
  */
 
 // VARIABLES FOR SASS
-@import 'style.scss';
+$font-stack: Verdana, serif;
+$primary-dark-color: rgb(0,0,0);
+$primary-light-color: rgb(255,255,255);
+$primary-contrast-color: rgb(166, 76, 100);
+$logo-font-family: fantasy;
+$data-font-size: 11px;
+
+// APPLICATION SCSS
+
+ body {
+   background: radial-gradient(white, black);
+   font-family: $font-stack;
+   margin: 0;
+   padding: 0;
+   height: 2000px;
+ }
+ #wrapper {
+  width: 70%;
+  margin: -20px auto 0 auto;
+  padding: 0;
+  background-color: $primary-light-color;
+}
+header {
+  margin: 0 1.9% 10px 1.9%;
+  padding-top: 30px;
+}
+.logo {
+  padding-top: 5px;
+}
+img {
+  float: left;
+}
+h1 {
+  float: left;
+  font-family: $logo-font-family;
+  margin-top: 0;
+  margin-left: 2px;
+}
+.header-subtitle {
+  font-family: $font-stack;
+  font-weight: 800;
+  margin-top: -5px;
+  float: right;
+}
+.title {
+  clear: both;
+  color: $primary-light-color;
+  background-color: $primary-contrast-color;
+  margin: 0 -2% 0 -2%;
+  padding: .1% 2% .1% 2%;
+}
+button  {
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+button:hover {
+  background-color: $primary-contrast-color;
+  color: $primary-light-color;
+  margin-bottom: 8px;
+}
+table {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  font-size: $data-font-size;
+  border-collapse: collapse;
+  span:hover {
+    cursor: pointer;
+  }
+  .id {
+    text-align: center;
+  }
+  .currency {
+    text-align: right;
+  }
+}
+td, th {
+  margin: 0;
+  padding: 4px 10px 4px 10px;
+  border: 1px solid $primary-contrast-color;
+  white-space: nowrap;
+}
+.sm-col {
+    width: 8%;
+}
+.md-col {
+    width: 8%;
+}
+.wd-col {
+    width: 15%;
+}
+.xwd-col {
+    width: 60%;
+}
+.total {
+  float: right;
+  margin-right: 5%;
+  margin-bottom: 15px;
+}
+footer {
+  clear: both;
+  background-color: $primary-contrast-color;
+  padding: 5px 0 15px 3%;
+}
+
+@media (max-width: 1200px) {
+  .tier-3 {
+    display: none;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .tier-2 {
+    display: none;
+  }
+  .sm-col {
+    width: 2%;
+  }
+  table {
+    width: 500px;
+    white-space: pre-wrap;
+  }
+  #wrapper {
+    width: 550px;
+  }
+}
