@@ -21,7 +21,7 @@ payments.blueprints.collection = Backbone.Collection.extend({
     return model.get('customer_name');
   },
   url: '/api/payments?key='
-    + '5ea222e9adea47398320f432d3e341b1'
+    + window.localStorage.API_PANDACARD_KEY;
 });
 // model view
 

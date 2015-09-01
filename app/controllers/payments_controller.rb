@@ -31,7 +31,7 @@ class PaymentsController < ApplicationController
   end
 
   def create
-    puts params
+    # puts params
 
     if validate(params[:key])  # make sure access is authorized
       render json: @payment
