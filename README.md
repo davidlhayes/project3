@@ -1,3 +1,5 @@
+# NOTE - AS OF 9/1/2015 11:42 A.M., pandacard.xyz is producing an unknown error and not loading data. The app runs locally as expected.
+
 # PandaCard
 ### Project 3 for General Assembly Web Development Immersive class
 an API Server + a Backbone.js front-end
@@ -59,6 +61,9 @@ must be appended a key string in the form of <code>/?key=abcdef</code>
 ## PandaCard - A Fictitious Credit Card Company
 
 PandaCard has members who are businesses which collect PandaCard payments and members who are customers who make payments using PandaCard.
+
+![PandaCard wireframe](https://raw.githubusercontent.com/davidlhayes/project3/master/app/assets/images/PandCard%20WIreframe.png)
+
 
 # User Stories
 
@@ -159,7 +164,7 @@ render: function() {
 }
 ```
 
-The following code is from the section of home.js that is executed after the document has loaded. It shows how the transaction ID is sorted up or down in response to a click. Below that is the corresponding code for sorting processor name. Sorting an integer in reverse simply requires negating the id returned from the model. Sorting on a string is more involved. It uses Underscore's map function and looks at character codes. Credit for this functioning goes to Andrew De Andrade on Stack Overflow.
+The following code is from the section of home.js that is executed after the document has loaded. It shows how the transaction ID is sorted up or down in response to a click. Below that is the corresponding code for sorting processor name. Sorting an integer in reverse simply requires negating the id returned from the model. Sorting on a string is more involved. It uses Underscore's map function and looks at character codes. Credit for this functioning goes to Andrew De Andrade on Stack Overflow. I believe it could be made more DRY, but time would be required to pull out the repetitive portion and correctly identify the input and the output of the isolated function.
 
 ```js
 // transaction id sort buttons
@@ -209,8 +214,7 @@ $('#sort-proc-down').on('click',function() {
   payments.active.collectionView.render();
 });
 ```
-4. **Security**--The API was secured as intended and instructed for implementation the Figaro gem. The key was placed in an environment variable through an application.yml configuration file that was listed in .gitignore so as to stay off GitHub. Client-side implementation of the API key was implemented by storing the API key in a window.localstorage variable and accessed there by home.js.
-
+4. **Security**--The API was secured as intended and instructed for implementation the Figaro gem. The key was placed in an environment variable through an application.yml configuration file that was listed in .gitignore so as to stay off GitHub. Client-side implementation of the API key was implemented by storing the API key in a window.localstorage variable and accessed there by home.js. This seemed not to work properly once the app was deployed on Digital Ocean and the API string was hard-coded into home.js. Neither hard-coding or window.localstorage of the plain-text API key seems ideal, but for this demo, was considered a low priority concern.
 
 # Version 2.0 Wish List
 
@@ -233,3 +237,11 @@ A look at a comparable existing service quickly shines a light on other componen
 3. Security must be leading edge, for the apps, the API, the log-ins.
 
 4.   (I have since read that US money should be dealt with using integers/pennies and would like to explore that idea).
+
+# General Observations
+
+Ruby on Rails and Backbone.js are new technologies to this developer. The underlying objective of this project was to learn and explore. As with a new language or new culture, it's useful to immerse oneself in the environment and experience the world in operation despite not understanding every part of it or how it works together. One follows the customs by mimicking for the sake of compliance. Patterns must be recognized and become familiar before the reasoning behind the elements of the environment can become evident.
+
+At this point, I appreciate that for this project Ruby on Rails handles the database. It is not exposed in the browser and is therefore more secure. Backbone.js is a bit harder to understand, but I've learned that the point is to create a structure in which the model (the data) and it's presentation can be kept separate. After all, what is presented is almost always a subset of what is stored and the view needs to be manipulated and that may or may not impact the model.
+
+This project gave me a glimpse into how models, collections, and views operate. I added some functions and in the process gained some understanding. More experience is needed to be certain that my code additions fit the intended relationships. There appears to be much freedom in where code is placed, but understanding is required to place it in the wisest place.
