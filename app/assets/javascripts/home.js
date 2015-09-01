@@ -20,8 +20,7 @@ payments.blueprints.collection = Backbone.Collection.extend({
     // PaymentsTotal = PaymentsTotal + model.get('trans_total');
     return model.get('customer_name');
   },
-  url: '/api/payments?key='
-    + '7c2d5f0dfaed465cae9d811cfba58f8a'
+  url: '/api/payments?key=7c2d5f0dfaed465cae9d811cfba58f8a'
 });
 // model view
 
