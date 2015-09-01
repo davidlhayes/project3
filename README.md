@@ -1,5 +1,8 @@
-# project3
+# PandaCard
+### Project 3 for General Assembly Web Development Immersive class
 an API Server + a Backbone.js front-end
+
+![PandaCard screenshot](https://raw.githubusercontent.com/davidlhayes/project3/master/app/assets/images/screen-pandacard.png)
 
 # Project Parameters
 
@@ -95,7 +98,7 @@ The PayPal REST API serves as inspiration. Of course, it returns far more attrib
 
 1.  Once PandaCard worked succesfully on my local computer, I uploaded it to Heroku. Heroku returned a 503 error page, application not available.
 
-2. 
+2.
 
 # Version 2.0 Wish List
 
