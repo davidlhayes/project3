@@ -2,6 +2,7 @@ $font-stack: Verdana, serif;
 $primary-dark-color: rgb(0,0,0);
 $primary-light-color: rgb(255,255,255);
 $primary-contrast-color: rgb(166, 76, 100);
+$link-highlight: rgb(226, 184, 228);
 $logo-font-family: fantasy;
 $data-font-size: 10px;
 
@@ -103,6 +104,17 @@ footer {
   background-color: $primary-contrast-color;
   padding: 5px 0 15px 3%;
   height: 75px;
+}
+a {
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+a, a:visited {
+  color: $primary-light-color;
+}
+a:hover {
+  color: $link-highlight;
 }
 .left {
   float: left;
