@@ -2,7 +2,7 @@
 ### Project 3 for General Assembly Web Development Immersive class
 an API Server + a Backbone.js front-end
 
-![PandaCard screenshot]()
+![PandaCard screenshot](https://raw.githubusercontent.com/davidlhayes/project3/master/app/assets/images/screen-pandacard.png)
 
 # Project Parameters
 
