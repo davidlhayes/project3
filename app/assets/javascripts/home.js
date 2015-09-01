@@ -65,6 +65,7 @@ payments.blueprints.collectionView = Backbone.View.extend({
       if ((collection[model].get('processor_name') ==  $('#processor_name_target').val()) || $('#processor_name_target').val()=='') {
         // sum the total
         sum = sum + Number(collection[model].get('trans_total'));
+        sum = Math.round(sum * 100) / 100
         new payments.blueprints.modelView({
           el: $('#payment-row'),
           model: collection[model]

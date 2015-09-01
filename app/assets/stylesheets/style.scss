@@ -3,7 +3,7 @@ $primary-dark-color: rgb(0,0,0);
 $primary-light-color: rgb(255,255,255);
 $primary-contrast-color: rgb(166, 76, 100);
 $logo-font-family: fantasy;
-$data-font-size: 11px;
+$data-font-size: 10px;
 
 // APPLICATION SCSS
 
@@ -23,6 +23,7 @@ $data-font-size: 11px;
 header {
   margin: 0 1.9% 10px 1.9%;
   padding-top: 30px;
+  background-image: url('../assets/images/pandacard-header-background.png');
 }
 .logo {
   padding-top: 5px;
@@ -112,13 +113,18 @@ footer {
   margin: 25px 15px 15px 0px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .tier-3 {
     display: none;
   }
 
 }
-
+@media (max-width: 1270px) {
+  .xwd-col {
+    width: 50%;
+    font-size: $data-font-size * .8;
+  }
+}
 @media (max-width: 700px) {
   .tier-2 {
     display: none;
