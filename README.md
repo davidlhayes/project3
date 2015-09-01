@@ -1,5 +1,3 @@
-# NOTE - AS OF 9/1/2015 11:42 A.M., pandacard.xyz is producing an unknown error and not loading data. The app runs locally as expected.
-
 # PandaCard
 ### Project 3 for General Assembly Web Development Immersive class
 an API Server + a Backbone.js front-end
@@ -44,13 +42,14 @@ In order to impelement PandaCard elsewhere, ensure that the technologies listed 
 2. Run Postgresql
 3. Run db:create
 4. Run db:migrate
-5. Add a file named application.yml in the config directory. Aside from any comment, it should contain only the string: 'API_PANDACARD_KEY: XXXXXXXXX' The actual value is up to you, but must also be added to line 24 of home.js.
+5. Add a file named application.yml in the config directory. Aside from any comment, it should contain only the string: 'API_PANDACARD_KEY: XXXXXXXXX' The actual value is up to you, but must also be added to line 24 of home.js. UPDATE: API Key requirement has been deactivated.
 5. Run rails s
 6. Use Postman or CocoaREST and insert localhost:3000/api/payments/?key=XXXXXX into the URL field to populate database using keys listed below. Use the POST method. Currently, the return from a succesful post is NULL. For a satisfactory display demonstration, dates should be formatted as such YYYY-MM-DD with leading zeros where necessary to fill all digits. For demo purposes, amounts should not contain trailing zeroes.
 7. Navigate to localhost:3000 for the main page.
 
 ## Security
 
+Note: API Key requirement has been deactivated
 An API Key will used to keep the API secure. For version 1.0, their will be one
 fixed key and it will return the results for every PandaCard payment processor.
 In the app, it means that with every GET, POST, PUT, PATCH, DELETE request, there
