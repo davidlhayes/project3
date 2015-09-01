@@ -218,6 +218,10 @@ $('#sort-proc-down').on('click',function() {
 
 2. The value of the PandaCard payments API is most evident when processors and customers can see transaction data specific to them. Separate apps could be developed for processors and customers, but that means that each API key must be checked against a table to determine which records are permitted to be returned.
 
+3. The data formatting must be robust for sorting and consistent display.
+
+4. Security needs to be corrected, such that the client-side app does not reveal the API key, in operation, or on GitHub (realizing that exposure is not completely avoidable).
+
 # Future development
 
 A look at a comparable existing service quickly shines a light on other components necessary if I was to develop PandaCard into a functioning enterprise.
