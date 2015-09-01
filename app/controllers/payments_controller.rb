@@ -1,39 +1,39 @@
 class PaymentsController < ApplicationController
 
   def index
-    if validate(params[:key])  # make sure access is authorized
+    # if validate(params[:key])  # make sure access is authorized
       @payments = Payment.all
       render json: @payments
-    else
-      render json: { :message => 'invalid api key'}
-    end
+    # else
+      # render json: { :message => 'invalid api key'}
+    # end
   end
 
   def show
     puts '-----------'
     puts params
     puts '-----------'
-    if validate(params[:key])  # make sure access is authorized
+    # if validate(params[:key])  # make sure access is authorized
       @payment = Payment.find(params[:id])
       render json: @payment
-    else
-      render json: { :message => 'invalid api key'}
-    end
+    # else
+    #   render json: { :message => 'invalid api key'}
+    # end
   end
 
   def new
-    if validate(params[:key])  # make sure access is authorized
+    # if validate(params[:key])  # make sure access is authorized
       @payment = Payment.new
       render json: @payment
-    else
-      render json: { :message => 'invalid api key'}
-    end
+    # else
+    #   render json: { :message => 'invalid api key'}
+    # end
   end
 
   def create
     # puts params
 
-    if validate(params[:key])  # make sure access is authorized
+    # if validate(params[:key])  # make sure access is authorized
       render json: @payment
       @payment = Payment.create(
         :processor_name => params[:processor_name],
@@ -45,28 +45,28 @@ class PaymentsController < ApplicationController
         :trans_total => params[:trans_total],
         :trans_memo => params[:trans_memo]
       )
-    else
-      render json: { :message => 'invalid api key'}
-    end
+    # else
+    #   render json: { :message => 'invalid api key'}
+    # end
 
   end
 
   def delete
 
-    if validate(params[:key]) # make sure access is authorized
+    # if validate(params[:key]) # make sure access is authorized
       @payment = Payment.find(params[:id])
       @payment.destroy
       # return a friendly json-formatted confirmation message
       @message = {:message => 'A payment with the id of ' + params[:id] + ' has been deleted.'}
       render json: @message
-    else
-      render json: { :message => 'invalid api key'}
-    end
+    # else
+    #   render json: { :message => 'invalid api key'}
+    # end
   end
 
   def update
 
-    if validate(params[:key]) # make sure access is authorized
+    # if validate(params[:key]) # make sure access is authorized
       @payment = Payment.find(params[:id])
       @payment.update({
         :processor_name => params[:processor_name],
@@ -80,9 +80,9 @@ class PaymentsController < ApplicationController
       })
 
       render json: @payment
-    else
-      render json: { :message => 'invalid api key'}
-    end
+    # else
+    #   render json: { :message => 'invalid api key'}
+    # end
   end
 
 private
