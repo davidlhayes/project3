@@ -2815,3 +2815,193 @@ Started GET "/assets/style.self-7c0140c94daed3f432ff7317311d1b33475d48277727d099
 [2015-09-01 11:44:58] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
 [2015-09-01 11:44:58] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
 [2015-09-01 11:44:58] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+Warning: You're using Rubygems 1.8.23 with Spring. Upgrade to at least Rubygems 2.1.0 and run `gem pristine --all` for better startup performance.
+/var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/spec_set.rb:92:in `block in materialize': Could not find rack-cors-0.4.0 in any of the sources (Bundler::GemNotFound)
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/spec_set.rb:85:in `map!'
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/spec_set.rb:85:in `materialize'
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/definition.rb:140:in `specs'
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/definition.rb:185:in `specs_for'
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/definition.rb:174:in `requested_specs'
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/environment.rb:18:in `requested_specs'
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/runtime.rb:13:in `setup'
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler.rb:127:in `setup'
+	from /var/lib/gems/1.9.1/gems/bundler-1.10.6/lib/bundler/setup.rb:18:in `<top (required)>'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /var/www/project3/config/boot.rb:3:in `<top (required)>'
+	from /var/www/project3/bin/rails:7:in `require_relative'
+	from /var/www/project3/bin/rails:7:in `<top (required)>'
+	from /var/lib/gems/1.9.1/gems/spring-1.3.6/lib/spring/client/rails.rb:28:in `load'
+	from /var/lib/gems/1.9.1/gems/spring-1.3.6/lib/spring/client/rails.rb:28:in `call'
+	from /var/lib/gems/1.9.1/gems/spring-1.3.6/lib/spring/client/command.rb:7:in `call'
+	from /var/lib/gems/1.9.1/gems/spring-1.3.6/lib/spring/client.rb:26:in `run'
+	from /var/lib/gems/1.9.1/gems/spring-1.3.6/bin/spring:48:in `<top (required)>'
+	from /var/lib/gems/1.9.1/gems/spring-1.3.6/lib/spring/binstub.rb:11:in `load'
+	from /var/lib/gems/1.9.1/gems/spring-1.3.6/lib/spring/binstub.rb:11:in `<top (required)>'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+	from /var/www/project3/bin/spring:13:in `<top (required)>'
+	from bin/rails:3:in `load'
+	from bin/rails:3:in `<main>'
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:17] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:18] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/create.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 208.59.143.245 at 2015-09-01 11:44:58 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 65.46.161.162 at 2015-09-01 11:44:58 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-8d5c88d6cb9c3cc9a49a912ba773838e896347dffc9fe0de809f86b371cafeae.css?body=1" for 208.59.143.245 at 2015-09-01 11:44:58 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 208.59.143.245 at 2015-09-01 11:44:58 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-276a53639e75e2a7c5780ee1f481ec27cc3008db178046f761c48e662dac3521.js?body=1" for 65.46.161.162 at 2015-09-01 11:44:58 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for 65.46.161.162 at 2015-09-01 11:44:58 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for 208.59.143.245 at 2015-09-01 11:44:58 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 208.59.143.245 at 2015-09-01 11:44:58 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/create.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 65.46.161.162 at 2015-09-01 11:44:58 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 65.46.161.162 at 2015-09-01 11:44:58 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 65.46.161.162 at 2015-09-01 11:44:58 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/api/payments?key=7c2d5f0dfaed465cae9d811cfba58f8a" for 65.46.161.162 at 2015-09-01 11:44:58 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PaymentsController#index as JSON
+  Parameters: {"key"=>"7c2d5f0dfaed465cae9d811cfba58f8a"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon-371580812b9def3de6b3ac422512f9b46d106df1af93733e77c5e1944a4a39aa.ico" for 208.59.143.245 at 2015-09-01 11:44:59 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 208.59.143.245 at 2015-09-01 11:54:16 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-8d5c88d6cb9c3cc9a49a912ba773838e896347dffc9fe0de809f86b371cafeae.css?body=1" for 65.46.161.162 at 2015-09-01 11:54:17 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 65.46.161.162 at 2015-09-01 11:54:17 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 65.46.161.162 at 2015-09-01 11:54:17 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 208.59.143.245 at 2015-09-01 11:54:17 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/create.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 208.59.143.245 at 2015-09-01 11:54:17 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-7c0140c94daed3f432ff7317311d1b33475d48277727d099b22ae3befabe42df.css?body=1" for 208.59.143.245 at 2015-09-01 11:54:17 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 65.46.161.162 at 2015-09-01 11:54:17 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/create.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 65.46.161.162 at 2015-09-01 11:54:17 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-276a53639e75e2a7c5780ee1f481ec27cc3008db178046f761c48e662dac3521.js?body=1" for 65.46.161.162 at 2015-09-01 11:54:17 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 208.59.143.245 at 2015-09-01 11:54:17 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for 208.59.143.245 at 2015-09-01 11:54:17 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/backbone.self-0b505a72e89152018c40056b6dd713668f96dbf508c0930e6ce7302cb7acfd88.js?body=1" for 208.59.143.245 at 2015-09-01 11:54:17 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 208.59.143.245 at 2015-09-01 11:54:17 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/api/payments?key=7c2d5f0dfaed465cae9d811cfba58f8a" for 65.46.161.162 at 2015-09-01 11:54:17 -0400
+Cannot render console from 65.46.161.162! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PaymentsController#index as JSON
+  Parameters: {"key"=>"7c2d5f0dfaed465cae9d811cfba58f8a"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon-371580812b9def3de6b3ac422512f9b46d106df1af93733e77c5e1944a4a39aa.ico" for 208.59.143.245 at 2015-09-01 11:54:18 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 208.59.143.245 at 2015-09-01 11:54:31 -0400
+Cannot render console from 208.59.143.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+[2015-09-01 11:54:31] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:31] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:31] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:31] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:31] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:31] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
+[2015-09-01 11:54:32] WARN  Could not determine content-length of response body. Set content-length of the response or set Response#chunked = true
