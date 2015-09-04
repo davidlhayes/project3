@@ -1,0 +1,186 @@
+processor_name  : Westbrook Dry Cleaning
+customer_name : Bob Anderson
+trans_date  : 2011-01-13
+trans_subtotal  : 44.99
+trans_tax : 3.99
+trans_shipping  : 1.99
+trans_total : 50.97
+trans_memo  : Two for one shirts special
+  :
+  :
+  :
+  :
+  :
+processor_name  : Westbrook Dry Cleaning
+customer_name : Bob Anderson
+trans_date  : 2014-03-12
+trans_subtotal  : 34.99
+trans_tax : 3.55
+trans_shipping  : 11.99
+trans_total : 50.53
+trans_memo  : Have a nice day!
+  :
+  :
+  :
+  :
+  :
+processor_name  : Westbrook Dry Cleaning
+customer_name : Ron McDonald
+trans_date  : 2015-04-01
+trans_subtotal  : 74.89
+trans_tax : 6.52
+trans_shipping  : 13.99
+trans_total : 95.4
+trans_memo  : includes storage fee
+  :
+  :
+  :
+  :
+  :
+processor_name  : Westbrook Dry Cleaning
+customer_name : Tim Williams
+trans_date  : 2010-01-01
+trans_subtotal  : 98.12
+trans_tax : 8.44
+trans_shipping  : 2.99
+trans_total : 109.55
+trans_memo  : Now cleaning furs
+  :
+  :
+  :
+  :
+  :
+processor_name  : Foxworks Welding
+customer_name : Sharon Ross
+trans_date  : 2014-02-05
+trans_subtotal  : 415.11
+trans_tax : 39.44
+trans_shipping  : 45.19
+trans_total : 499.74
+trans_memo  : We'll weld almost any metal!
+  :
+  :
+  :
+  :
+  :
+processor_name : Foxworks Welding
+customer_name: Mike Landers
+trans_date : 2011-02-04
+trans_subtotal : 1409.84
+trans_tax : 120.02
+trans_shipping  : 98.59
+trans_total : 1628.45
+trans_memo:  We weld all metals!
+  :
+  :
+  :
+  :
+  :
+  :
+processor_name  : Foxworks Welding
+customer_name : Wesley Arnold
+trans_date  : 2014-09-14
+trans_subtotal  : 215.99
+trans_tax : 19.44
+trans_shipping  : 12.55
+trans_total : 247.98
+trans_memo  : Home of the Foxworks Racing Team!
+  :
+  :
+  :
+  :
+  :
+processor_name  : Quora Racing Supplies
+customer_name : Wendy Ssmith
+trans_date  : 2014-08-01
+trans_subtotal  : 459.33
+trans_tax : 43.89
+trans_shipping  : 16.89
+trans_total : 520.11
+trans_memo  : Helmet special
+  :
+  :
+  :
+  :
+  :
+processor_name  : Quora Racing Supplies
+customer_name : Thomas Paine
+trans_date  : 2012-07-02
+trans_subtotal  : 510.22
+trans_tax : 45.22
+trans_shipping  : 49.22
+trans_total : 604.66
+trans_memo  : includes custom header installation
+  :
+  :
+  :
+  :
+  :
+processor_name  : Quora Racing Supplies
+customer_name : Ben Franklin
+trans_date  : 2013-08-15
+trans_subtotal  : 650.44
+trans_tax : 65.03
+trans_shipping  : 14.99
+trans_total : 730.46
+trans_memo  : Best in the Bay Area!
+  :
+  :
+  :
+  :
+  :
+processor_name  : Lucas Costumes
+customer_name : Sharon Ross
+trans_date  : 9/4/15
+trans_subtotal  : 32.44
+trans_tax : 3.51
+trans_shipping  : 4.15
+trans_total : 40.11
+trans_memo  : Have an awesome day!
+  :
+  :
+  :
+  :
+  :
+processor_name  : Lucas Costumes
+customer_name : Betsy Rossi
+trans_date  : 2014-10-17
+trans_subtotal  : 97.99
+trans_tax : 8.59
+trans_shipping  : 5.89
+trans_total : 112.47
+  :
+  :
+  :
+  :
+  :
+  :
+processor_name  : Lucas Costumes
+customer_name : Lincoln Charles
+trans_date  : 2013-5-28
+trans_subtotal  : 124.51
+trans_tax : 10.15
+trans_shipping  : 15.27
+trans_total : 149.93
+trans_memo  : Thank you for your business!
+  :
+  :
+  :
+  :
+processor_name  : Lucas Costumes
+customer_name : Han Solo
+trans_date: 2010-03-30
+trans_subtotal  : 124.51
+trans_tax : 10.15
+trans_shipping  : 15.27
+trans_total : 149.93
+trans_memo  : We shoot first!
+
+processor_name  : Penny Whistle Shop
+customer_name : Mervin Fitz
+trans_date: 2014-04-30
+trans_subtotal  : 129.51
+trans_tax : 10.15
+trans_shipping  : 15.27
+trans_total : 154.93
+trans_memo  : 10 pct return customer disc applied
